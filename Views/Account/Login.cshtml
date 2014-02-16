@@ -1,0 +1,20 @@
+﻿@model ConferenceScheduler.Models.UserLogin
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>UC Conference Scheduler</h2>
+
+<fieldset>
+    <legend>Login</legend>
+    @Html.ValidationSummary()
+    @using(Html.BeginForm("Login", "Account", new {returnUrl = Model.ReturnUrl}, FormMethod.Post))
+    {
+        @Html.EditorForModel()
+     <p>
+         <input type="submit" />
+     </p>
+    }
+
+</fieldset>

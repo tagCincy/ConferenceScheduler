@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace ConferenceScheduler.Models
+{
+    public class User
+    {
+        public int UserID { get; set; }
+        public string Name { get; set; }
+        public string EmailAddress { get; set; }
+        public string Company { get; set; }
+        public string Password { get; set; }
+
+        public virtual ICollection<Enrollment> Enrollments { get; set; }
+    }
+}
