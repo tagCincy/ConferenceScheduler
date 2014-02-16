@@ -1,2 +1,4 @@
 *.mdf
 *.ldf
+App_Data/ConferenceScheduler.Models.DAL.ConferenceContext.mdf
+App_Data/ConferenceScheduler.Models.DAL.ConferenceContext_log.ldf
