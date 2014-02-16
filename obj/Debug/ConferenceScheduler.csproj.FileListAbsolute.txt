@@ -86,3 +86,6 @@ C:\Users\Tim\Documents\Visual Studio 2013\Projects\ConferenceScheduler\Conferenc
 C:\Users\Tim\Documents\Visual Studio 2013\Projects\ConferenceScheduler\ConferenceScheduler\obj\Debug\ConferenceScheduler.csproj.GenerateResource.Cache
 C:\Users\Tim\Documents\Visual Studio 2013\Projects\ConferenceScheduler\ConferenceScheduler\obj\Debug\ConferenceSchecduler.dll
 C:\Users\Tim\Documents\Visual Studio 2013\Projects\ConferenceScheduler\ConferenceScheduler\obj\Debug\ConferenceSchecduler.pdb
+C:\Users\Tim\Documents\Visual Studio 2013\Projects\ConferenceScheduler\ConferenceScheduler\bin\EntityFramework.SqlServer.dll
+C:\Users\Tim\Documents\Visual Studio 2013\Projects\ConferenceScheduler\ConferenceScheduler\bin\EntityFramework.SqlServer.xml
+C:\Users\Tim\Documents\Visual Studio 2013\Projects\ConferenceScheduler\ConferenceScheduler\obj\Debug\ConferenceScheduler.Migrations.UserConstraints.resources

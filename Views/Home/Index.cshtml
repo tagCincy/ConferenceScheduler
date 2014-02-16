@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>UC Conference Scheduler</h2>
+
+<div>
+    <p>
+        <a href="/sessions">Find Sessions</a>
+    </p>
+    <p>
+        <a href="/user/@Html.ViewContext.HttpContext.User.Identity.Name">Updte My Profile</a>
+    </p>
+</div>

@@ -10,7 +10,6 @@ using System.Web.Security;
 
 namespace ConferenceScheduler.Controllers
 {
-    [Authorize]
     public class AccountController : Controller
     {
         IAuthProvider _auth;
@@ -20,14 +19,12 @@ namespace ConferenceScheduler.Controllers
             _auth = authProvider;
         }
 
-        [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
             UserLogin l = new UserLogin { ReturnUrl = returnUrl };
             return View(l);
         }
 
-        [AllowAnonymous]
         [HttpPost]
         public ActionResult Login(UserLogin l)
         {
@@ -46,13 +43,5 @@ namespace ConferenceScheduler.Controllers
             }
             return View();
         }
-
-        //
-        // GET: /Account/
-        public ActionResult Index()
-        {
-            return View();
-        }
-
     }
 }
