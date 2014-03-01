@@ -1,3 +1,5 @@
+using ConferenceScheduler.Models.Repositories;
+
 [assembly: WebActivator.PreApplicationStartMethod(typeof(ConferenceScheduler.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivator.ApplicationShutdownMethodAttribute(typeof(ConferenceScheduler.App_Start.NinjectWebCommon), "Stop")]
 
@@ -10,8 +12,7 @@ namespace ConferenceScheduler.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
-    using ConferenceScheduler.Models.Abstract;
-    using ConferenceScheduler.Models.Concrete;
+    using ConferenceScheduler.Models.Interfaces;
 
     public static class NinjectWebCommon 
     {
@@ -57,6 +58,8 @@ namespace ConferenceScheduler.App_Start
         {
             kernel.Bind<IAuthProvider>().To<AuthProvider>();
             kernel.Bind<IUserRepository>().To<UserRepository>();
+            kernel.Bind<ISessionRepository>().To<SessionReposity>();
+            kernel.Bind<IEnrollRepository>().To<EnrollRepository>();
         }        
     }
 }

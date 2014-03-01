@@ -89,3 +89,42 @@ C:\Users\Tim\Documents\Visual Studio 2013\Projects\ConferenceScheduler\Conferenc
 C:\Users\Tim\Documents\Visual Studio 2013\Projects\ConferenceScheduler\ConferenceScheduler\bin\EntityFramework.SqlServer.dll
 C:\Users\Tim\Documents\Visual Studio 2013\Projects\ConferenceScheduler\ConferenceScheduler\bin\EntityFramework.SqlServer.xml
 C:\Users\Tim\Documents\Visual Studio 2013\Projects\ConferenceScheduler\ConferenceScheduler\obj\Debug\ConferenceScheduler.Migrations.UserConstraints.resources
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\ConferenceSchecduler.dll.config
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\ConferenceSchecduler.dll
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\ConferenceSchecduler.pdb
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\EntityFramework.dll
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\EntityFramework.SqlServer.dll
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Net.Http.Formatting.dll
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.Http.dll
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.Http.WebHost.dll
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.Mvc.dll
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.Razor.dll
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.WebPages.Deployment.dll
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.WebPages.dll
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.WebPages.Razor.dll
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\EntityFramework.xml
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\EntityFramework.SqlServer.xml
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\Ninject.pdb
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\Ninject.xml
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\Ninject.Web.Common.pdb
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\Ninject.Web.Common.xml
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\Ninject.Web.Mvc.pdb
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\Ninject.Web.Mvc.xml
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Net.Http.Formatting.xml
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.Http.xml
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.Http.WebHost.xml
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.Mvc.xml
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.Razor.xml
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.WebPages.xml
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.WebPages.Deployment.xml
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.WebPages.Razor.xml
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\obj\Debug\ConferenceScheduler.csprojResolveAssemblyReference.cache
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\obj\Debug\ConferenceScheduler.Migrations.InitialCreate.resources
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\obj\Debug\ConferenceScheduler.Migrations.UserConstraints.resources
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\obj\Debug\ConferenceScheduler.csproj.GenerateResource.Cache
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\obj\Debug\ConferenceSchecduler.dll
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\obj\Debug\ConferenceSchecduler.pdb
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\Newtonsoft.Json.dll
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\obj\Debug\ConferenceScheduler.Migrations.EnrollmentContraints.resources

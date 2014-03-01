@@ -161,13 +161,21 @@
     <Compile Include="Migrations\201402162151162_UserConstraints.Designer.cs">
       <DependentUpon>201402162151162_UserConstraints.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201402251841097_EnrollmentContraints.cs" />
+    <Compile Include="Migrations\201402251841097_EnrollmentContraints.Designer.cs">
+      <DependentUpon>201402251841097_EnrollmentContraints.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Abstract\IAuthProvider.cs" />
-    <Compile Include="Models\Abstract\IUserRepository.cs" />
-    <Compile Include="Models\Concrete\UserRepository.cs" />
+    <Compile Include="Models\Interfaces\IAuthProvider.cs" />
+    <Compile Include="Models\Interfaces\IEnrollRepository.cs" />
+    <Compile Include="Models\Interfaces\ISessionRepository.cs" />
+    <Compile Include="Models\Interfaces\IUserRepository.cs" />
+    <Compile Include="Models\Repositories\EnrollRepository.cs" />
+    <Compile Include="Models\Repositories\SessionReposity.cs" />
+    <Compile Include="Models\Repositories\UserRepository.cs" />
     <Compile Include="Models\DAL\ConferenceContext.cs" />
     <Compile Include="Models\Enrollment.cs" />
-    <Compile Include="Models\Concrete\AuthProvider.cs" />
+    <Compile Include="Models\Repositories\AuthProvider.cs" />
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserLogin.cs" />
@@ -275,6 +283,8 @@
     <Content Include="Views\Session\Delete.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Profile.cshtml" />
+    <Content Include="Views\Home\Enroll.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -289,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201402162151162_UserConstraints.resx">
       <DependentUpon>201402162151162_UserConstraints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402251841097_EnrollmentContraints.resx">
+      <DependentUpon>201402251841097_EnrollmentContraints.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

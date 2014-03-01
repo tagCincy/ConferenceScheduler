@@ -12,7 +12,8 @@ namespace ConferenceScheduler.Controllers
 {
     public class SessionController : Controller
     {
-        private ConferenceContext db = new ConferenceContext();
+        readonly ISession
+
 
         //
         // GET: /Session/

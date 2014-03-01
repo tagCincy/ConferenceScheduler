@@ -1,10 +1,5 @@
 ﻿using ConferenceScheduler.Models;
-using ConferenceScheduler.Models.Abstract;
-using ConferenceScheduler.Models.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using ConferenceScheduler.Models.Interfaces;
 using System.Web.Mvc;
 using System.Web.Security;
 
@@ -12,7 +7,7 @@ namespace ConferenceScheduler.Controllers
 {
     public class AccountController : Controller
     {
-        IAuthProvider _auth;
+        readonly IAuthProvider _auth;
 
         public AccountController(IAuthProvider authProvider)
         {
@@ -21,7 +16,7 @@ namespace ConferenceScheduler.Controllers
 
         public ActionResult Login(string returnUrl)
         {
-            UserLogin l = new UserLogin { ReturnUrl = returnUrl };
+            var l = new UserLogin { ReturnUrl = returnUrl };
             return View(l);
         }
 
@@ -36,10 +31,7 @@ namespace ConferenceScheduler.Controllers
                     FormsAuthentication.SetAuthCookie(l.Email, false);
                     return Redirect(l.ReturnUrl);
                 }
-                else
-                {
-                    return View();
-                }
+                return View();
             }
             return View();
         }

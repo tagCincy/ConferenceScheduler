@@ -1,0 +1,12 @@
+﻿@model ConferenceScheduler.Models.User
+
+@{
+    ViewBag.Title = "User Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>User Profile</h2>
+
+<p><strong>Name: </strong> @Html.TextBoxFor(model => model.Name, new {@readonly = true})</p>
+<p><strong>Company: </strong> @Html.TextBoxFor(model => model.Company, new { @readonly = true })</p>
+<p><strong>Email: </strong> @Html.TextBoxFor(model => model.EmailAddress, new { @readonly = true })</p>
