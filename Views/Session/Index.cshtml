@@ -1,14 +1,15 @@
-﻿@model IEnumerable<ConferenceSchecduler.Models.Session>
+﻿@model IEnumerable<ConferenceScheduler.Models.Session>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Sessions";
 }
 
-<h2>Index</h2>
+<h2>Sessions</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @if (TempData["error"] != null) { @TempData["error"].ToString(); }
 </p>
+
 <table>
     <tr>
         <th>
@@ -53,9 +54,8 @@
             @Html.DisplayFor(modelItem => item.IsFull)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SessionID }) |
             @Html.ActionLink("Details", "Details", new { id=item.SessionID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SessionID })
+            @Html.ActionLink("Enroll", "Enroll", new { id=item.SessionID })
         </td>
     </tr>
 }

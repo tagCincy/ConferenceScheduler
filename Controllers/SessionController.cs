@@ -7,28 +7,37 @@ using System.Web;
 using System.Web.Mvc;
 using ConferenceScheduler.Models;
 using ConferenceScheduler.Models.DAL;
+using ConferenceScheduler.Models.Interfaces;
 
 namespace ConferenceScheduler.Controllers
 {
+    [Authorize]
     public class SessionController : Controller
     {
-        readonly ISession
+        readonly ISessionRepository _sess;
+        readonly IUserRepository _user;
 
+        public SessionController(ISessionRepository sessionRepo, IUserRepository userRepo)
+        {
+            _sess = sessionRepo;
+            _user = userRepo;
+        }
 
         //
         // GET: /Session/
 
         public ActionResult Index()
         {
-            return View(db.Sessions.ToList());
+            IEnumerable<Session> sessions = _sess.GetAvailableSessions();
+            return View(sessions);
         }
 
         //
         // GET: /Session/Details/5
 
-        public ActionResult Details(int id = 0)
+        public ActionResult Details(int id)
         {
-            Session session = db.Sessions.Find(id);
+            Session session = _sess.GetSessions(id);
             if (session == null)
             {
                 return HttpNotFound();
@@ -37,89 +46,20 @@ namespace ConferenceScheduler.Controllers
         }
 
         //
-        // GET: /Session/Create
-
-        public ActionResult Create()
+        // GET: /Session/Enroll/5
+        public ActionResult Enroll(int id)
         {
-            return View();
-        }
+            User currentUser = _user.GetUserByEmail(User.Identity.Name);
+            bool enrolled = _sess.AddUserToSession(id, currentUser);
 
-        //
-        // POST: /Session/Create
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(Session session)
-        {
-            if (ModelState.IsValid)
+            if (enrolled)
             {
-                db.Sessions.Add(session);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                TempData["success"] = "Enrolled!";
+                return Redirect("/");
             }
 
-            return View(session);
-        }
-
-        //
-        // GET: /Session/Edit/5
-
-        public ActionResult Edit(int id = 0)
-        {
-            Session session = db.Sessions.Find(id);
-            if (session == null)
-            {
-                return HttpNotFound();
-            }
-            return View(session);
-        }
-
-        //
-        // POST: /Session/Edit/5
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(Session session)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(session).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(session);
-        }
-
-        //
-        // GET: /Session/Delete/5
-
-        public ActionResult Delete(int id = 0)
-        {
-            Session session = db.Sessions.Find(id);
-            if (session == null)
-            {
-                return HttpNotFound();
-            }
-            return View(session);
-        }
-
-        //
-        // POST: /Session/Delete/5
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Session session = db.Sessions.Find(id);
-            db.Sessions.Remove(session);
-            db.SaveChanges();
+           TempData["error"] = "Cannot Enroll User";
             return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            db.Dispose();
-            base.Dispose(disposing);
         }
     }
 }

@@ -9,14 +9,15 @@
 
 <div>
     <p>
-        <a href="/home/enroll">Enroll in Sessions</a>
-    </p>
-    <p>
-        @*<a href="/home/profile">Update My Profile</a>*@
+        <a href="/Session">Enroll in Sessions</a>
     </p>
 </div>
 
 <div>
+    <p>
+        @if (TempData["success"] != null) { TempData["success"].ToString(); }
+    </p>
+
     <table>
         <caption>My Enrolled Sessions:</caption>
         <thead>
