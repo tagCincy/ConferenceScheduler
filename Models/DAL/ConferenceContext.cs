@@ -12,6 +12,8 @@ namespace ConferenceScheduler.Models.DAL
         public DbSet<User> Users { get; set; }
         public DbSet<Session> Sessions { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
+        public DbSet<Role> Roles { get; set; }
+       
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

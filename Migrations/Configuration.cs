@@ -18,6 +18,7 @@ namespace ConferenceScheduler.Migrations
         {
             var users = new List<User>
             {
+                new User { Name = "Tim Guibord", EmailAddress = "timguibord@gmail.com", Company = "UC", Password = "password123"},
                 new User { Name = "Bob Smith", EmailAddress = "bob@email.com", Company = "Big Bob's Carpet", Password = "password123"},
                 new User { Name = "Dave Jones", EmailAddress = "dave@email.com", Company = "Famous Dave's BBQ", Password = "password123"},
                 new User { Name = "John Doe", EmailAddress = "john@email.com", Company = "Apex SCT", Password = "password123"}
@@ -57,6 +58,31 @@ namespace ConferenceScheduler.Migrations
 
             enrollments.ForEach(s => context.Enrollments.AddOrUpdate(p => p.EnrollmentID, s));
             context.SaveChanges();
+
+            var roles = new List<Role>
+            {
+                new Role {
+                    Name = "Admin"
+                },
+
+                new Role {
+                    Name = "Attendee"
+                }
+            };
+
+            roles.ForEach(s => context.Roles.AddOrUpdate(p => p.RoleID, s));
+            context.SaveChanges();
+
+            //var userRoles = new List<UserRole>
+            //{
+            //    new UserRole {
+            //        UserID = users.Single(s => s.EmailAddress == "timguibord@gmail.com").UserID,
+            //        RoleID = roles.Single(s => s.Name == "Admin").RoleID
+            //    }
+            //};
+
+            //userRoles.ForEach(s => context.UserRoles.AddOrUpdate(p => p.UserRoleID, s));
+            //context.SaveChanges();
         }
     }
 }

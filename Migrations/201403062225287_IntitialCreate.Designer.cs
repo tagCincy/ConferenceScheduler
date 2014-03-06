@@ -7,13 +7,13 @@ namespace ConferenceScheduler.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.0.2-21211")]
-    public sealed partial class UserConstraints : IMigrationMetadata
+    public sealed partial class IntitialCreate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UserConstraints));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(IntitialCreate));
         
         string IMigrationMetadata.Id
         {
-            get { return "201402162151162_UserConstraints"; }
+            get { return "201403062225287_IntitialCreate"; }
         }
         
         string IMigrationMetadata.Source

@@ -26,5 +26,6 @@ namespace ConferenceScheduler.Models
         public string Password { get; set; }
 
         public virtual ICollection<Enrollment> Enrollments { get; set; }
+        public virtual ICollection<Role> Roles { get; set; }
     }
 }

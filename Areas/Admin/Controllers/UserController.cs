@@ -10,6 +10,7 @@ using ConferenceScheduler.Models.DAL;
 
 namespace ConferenceScheduler.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class UserController : Controller
     {
         private ConferenceContext db = new ConferenceContext();

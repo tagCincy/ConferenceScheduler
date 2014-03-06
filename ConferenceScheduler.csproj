@@ -153,17 +153,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201402152104587_InitialCreate.cs" />
-    <Compile Include="Migrations\201402152104587_InitialCreate.Designer.cs">
-      <DependentUpon>201402152104587_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201402162151162_UserConstraints.cs" />
-    <Compile Include="Migrations\201402162151162_UserConstraints.Designer.cs">
-      <DependentUpon>201402162151162_UserConstraints.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201402251841097_EnrollmentContraints.cs" />
-    <Compile Include="Migrations\201402251841097_EnrollmentContraints.Designer.cs">
-      <DependentUpon>201402251841097_EnrollmentContraints.cs</DependentUpon>
+    <Compile Include="Migrations\201403062225287_IntitialCreate.cs" />
+    <Compile Include="Migrations\201403062225287_IntitialCreate.Designer.cs">
+      <DependentUpon>201403062225287_IntitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Interfaces\IAuthProvider.cs" />
@@ -176,6 +168,7 @@
     <Compile Include="Models\DAL\ConferenceContext.cs" />
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\Repositories\AuthProvider.cs" />
+    <Compile Include="Models\Roles.cs" />
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserLogin.cs" />
@@ -290,14 +283,8 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201402152104587_InitialCreate.resx">
-      <DependentUpon>201402152104587_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201402162151162_UserConstraints.resx">
-      <DependentUpon>201402162151162_UserConstraints.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201402251841097_EnrollmentContraints.resx">
-      <DependentUpon>201402251841097_EnrollmentContraints.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201403062225287_IntitialCreate.resx">
+      <DependentUpon>201403062225287_IntitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
