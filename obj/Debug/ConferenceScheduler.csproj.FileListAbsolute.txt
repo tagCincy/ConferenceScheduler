@@ -146,7 +146,8 @@ C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.Razor.xml
 C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.WebPages.xml
 C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.WebPages.Deployment.xml
 C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\bin\System.Web.WebPages.Razor.xml
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\obj\Debug\ConferenceScheduler.Migrations.InitialCreate.resources
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\obj\Debug\ConferenceScheduler.csproj.GenerateResource.Cache
 C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\obj\Debug\ConferenceSchecduler.dll
 C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\obj\Debug\ConferenceSchecduler.pdb
-C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\obj\Debug\ConferenceScheduler.Migrations.IntitialCreate.resources
-C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\obj\Debug\ConferenceScheduler.csproj.GenerateResource.Cache
+C:\Users\tguibord\Desktop\GitHub\ConferenceScheduler\obj\Debug\ConferenceScheduler.csprojResolveAssemblyReference.cache

@@ -10,8 +10,8 @@ namespace ConferenceScheduler.Models.Interfaces
     {
         IEnumerable<User> GetAllUsers();
         User GetUserByEmail(string email);
-        bool CreateUser(User u);
-        bool UpdateUser(User u);
+        User CreateUser(User u);
+        User UpdateUser(User u);
         bool DeleteUser(int id);
     }
 }

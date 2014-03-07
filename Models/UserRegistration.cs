@@ -1,18 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
 namespace ConferenceScheduler.Models
 {
-    public class User
+    public class UserRegistration
     {
-
-        [Key]
-        public int UserID { get; set; }
-
         [Required]
         public string Name { get; set; }
 
@@ -27,7 +22,9 @@ namespace ConferenceScheduler.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        public virtual ICollection<Session> Sessions { get; set; }
-        public virtual ICollection<Role> Roles { get; set; }
+        [Required]
+        [DataType(DataType.Password)]
+        public string ConfirmPassword { get; set; }
+
     }
 }

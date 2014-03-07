@@ -10,5 +10,6 @@ namespace ConferenceScheduler.Models.Interfaces
     {
         bool Authenticate(UserLogin l);
         int GetCurrentUserId(string email);
+        User CreateNewUser(UserRegistration r);
     }
 }

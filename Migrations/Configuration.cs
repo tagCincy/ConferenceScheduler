@@ -40,23 +40,9 @@ namespace ConferenceScheduler.Migrations
             sessions.ForEach(s => context.Sessions.AddOrUpdate(p => p.Title, s));
             context.SaveChanges();
 
-            var enrollments = new List<Enrollment>
-            {
-                new Enrollment {
-                    UserID = users.Single(s => s.EmailAddress == "bob@email.com").UserID,
-                    SessionID = sessions.Single(s => s.Title == "Intro to Ruby").SessionID
-                },
-                new Enrollment {
-                    UserID = users.Single(s => s.EmailAddress == "bob@email.com").UserID,
-                    SessionID = sessions.Single(s => s.Title == "Intro to Rails").SessionID
-                },
-                new Enrollment {
-                    UserID = users.Single(s => s.EmailAddress == "bob@email.com").UserID,
-                    SessionID = sessions.Single(s => s.Title == "Advance AngularJS").SessionID
-                }
-            };
-
-            enrollments.ForEach(s => context.Enrollments.AddOrUpdate(p => p.EnrollmentID, s));
+            var userSessions = sessions.GetRange(1, 4);
+            User sessionUser = users.Find(u => u.EmailAddress == "bob@email.com");
+            sessionUser.Sessions = userSessions;
             context.SaveChanges();
 
             var roles = new List<Role>
@@ -73,16 +59,9 @@ namespace ConferenceScheduler.Migrations
             roles.ForEach(s => context.Roles.AddOrUpdate(p => p.RoleID, s));
             context.SaveChanges();
 
-            //var userRoles = new List<UserRole>
-            //{
-            //    new UserRole {
-            //        UserID = users.Single(s => s.EmailAddress == "timguibord@gmail.com").UserID,
-            //        RoleID = roles.Single(s => s.Name == "Admin").RoleID
-            //    }
-            //};
-
-            //userRoles.ForEach(s => context.UserRoles.AddOrUpdate(p => p.UserRoleID, s));
-            //context.SaveChanges();
+            User adminUser = users.First();            
+            adminUser.Roles = roles;
+            context.SaveChanges();
         }
     }
 }

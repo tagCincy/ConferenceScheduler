@@ -26,32 +26,19 @@ namespace ConferenceScheduler.Models.Repositories
         public bool AddUserToSession(int id, User currentUser)
         {
             Session session = _context.Sessions.Find(id);
-            var isEnrolled = _context.Enrollments.Where(e => e.SessionID == session.SessionID).Where(e => e.UserID == currentUser.UserID).FirstOrDefault();
 
-            if (isEnrolled == null)
+            if(session.Users == null || !session.Users.Contains(currentUser))
             {
-                Enrollment enrollment = new Enrollment
-                {
-                    SessionID = session.SessionID,
-                    UserID = currentUser.UserID
-                };
-
-                _context.Enrollments.Add(enrollment);
+                session.Users.Add(_context.Users.Find(currentUser.UserID));
                 _context.SaveChanges();
 
-                if (enrollment != null)
+                if(session.Occupancy == session.Users.Count)
                 {
-                    IEnumerable<Enrollment> sessionEnrollment = _context.Enrollments.Where(e => e.SessionID == session.SessionID);
-                    int sessionOccupancy = session.Occupancy;
-
-                    if (sessionEnrollment.Count() == sessionOccupancy)
-                    {
-                        session.IsFull = true;
-                        _context.SaveChanges();
-                    }
-
-                    return true;
+                    session.IsFull = true;
+                    _context.SaveChanges();
                 }
+                
+                return true;
             }
 
             return false;

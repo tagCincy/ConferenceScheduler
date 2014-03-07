@@ -22,5 +22,14 @@ namespace ConferenceScheduler.Models.Repositories
             var user = _ur.GetUserByEmail(email);
             return user.UserID;
         }
+
+
+        public User CreateNewUser(UserRegistration r)
+        {
+            User newUser = _ur.CreateUser(
+                new User { Name = r.Name, Company = r.Company, EmailAddress = r.EmailAddress, Password = r.Password }
+                );
+            return newUser;
+        }
     }
 }

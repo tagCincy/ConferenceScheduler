@@ -55,11 +55,11 @@ namespace ConferenceScheduler.Controllers
             if (enrolled)
             {
                 TempData["success"] = "Enrolled!";
-                return Redirect("/");
+                return RedirectToAction("Index", "Home");
             }
 
            TempData["error"] = "Cannot Enroll User";
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Session");
         }
     }
 }

@@ -20,12 +20,14 @@ namespace ConferenceScheduler.Models.Repositories
             return _context.Users.FirstOrDefault(s => s.EmailAddress == email);
         }
 
-        public bool CreateUser(User u)
+        public User CreateUser(User u)
         {
-            throw new NotImplementedException();
+            User newUser = _context.Users.Add(u);
+            _context.SaveChanges();
+            return newUser;
         }
 
-        public bool UpdateUser(User u)
+        public User UpdateUser(User u)
         {
             throw new NotImplementedException();
         }

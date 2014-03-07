@@ -9,21 +9,17 @@ namespace ConferenceScheduler.Controllers
     public class HomeController : Controller
     {
         readonly IUserRepository _user;
-        readonly IEnrollRepository _enroll;
-        readonly ISessionRepository _sess;
 
-        public HomeController(IUserRepository userRepo, ISessionRepository sessionRepo, IEnrollRepository enrollRepo)
+        public HomeController(IUserRepository userRepo)
         {
             _user = userRepo;
-            _sess = sessionRepo;
-            _enroll = enrollRepo;
         }
 
         //
         // GET: /Home/
         public ActionResult Index()
         {
-            User currentUser =  _user.GetUserByEmail(User.Identity.Name);
+            User currentUser = _user.GetUserByEmail(User.Identity.Name);
             return View(currentUser);
         }
     }

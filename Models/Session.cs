@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Web;
 
@@ -15,6 +16,6 @@ namespace ConferenceScheduler.Models
         public int Occupancy { get; set; }
         public Boolean IsFull { get; set; }
 
-        public ICollection<Enrollment> Enrollments { get; set; }
+        public virtual ICollection<User> Users { get; set; }
     }
 }

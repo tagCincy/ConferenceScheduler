@@ -59,7 +59,6 @@ namespace ConferenceScheduler.App_Start
             kernel.Bind<IAuthProvider>().To<AuthProvider>();
             kernel.Bind<IUserRepository>().To<UserRepository>();
             kernel.Bind<ISessionRepository>().To<SessionReposity>();
-            kernel.Bind<IEnrollRepository>().To<EnrollRepository>();
         }        
     }
 }

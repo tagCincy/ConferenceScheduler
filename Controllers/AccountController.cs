@@ -31,8 +31,34 @@ namespace ConferenceScheduler.Controllers
                     FormsAuthentication.SetAuthCookie(l.Email, false);
                     return Redirect(l.ReturnUrl);
                 }
-                return View();
             }
+
+            return View();
+        }
+
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Register(UserRegistration r)
+        {
+
+            if(ModelState.IsValid)
+            {
+                if (r.Password == r.ConfirmPassword)
+                {
+                    var newUser = _auth.CreateNewUser(r);
+
+                    if (newUser != null)
+                    {
+                        FormsAuthentication.SetAuthCookie(r.EmailAddress, false);
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+            }
+
             return View();
         }
     }

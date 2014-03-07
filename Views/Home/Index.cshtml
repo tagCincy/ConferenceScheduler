@@ -28,14 +28,15 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (ConferenceScheduler.Models.Enrollment e in Model.Enrollments)
-            {
-                <tr>
-                    <td>@e.Session.Title</td>
-                    <td>@e.Session.Location</td>
-                    <td>@e.Session.Time</td>
-                </tr>
-            }
+            @foreach (ConferenceScheduler.Models.Session e in Model.Sessions)
+                {
+                    <tr>
+                        <td>@e.Title</td>
+                        <td>@e.Location</td>
+                        <td>@e.Time</td>
+                    </tr>
+                }
+
         </tbody>
     </table>
 </div>

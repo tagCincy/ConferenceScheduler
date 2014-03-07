@@ -150,28 +150,27 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
+    <Compile Include="Controllers\UserServicesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201403062225287_IntitialCreate.cs" />
-    <Compile Include="Migrations\201403062225287_IntitialCreate.Designer.cs">
-      <DependentUpon>201403062225287_IntitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201403071443387_InitialCreate.cs" />
+    <Compile Include="Migrations\201403071443387_InitialCreate.Designer.cs">
+      <DependentUpon>201403071443387_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Interfaces\IAuthProvider.cs" />
-    <Compile Include="Models\Interfaces\IEnrollRepository.cs" />
     <Compile Include="Models\Interfaces\ISessionRepository.cs" />
     <Compile Include="Models\Interfaces\IUserRepository.cs" />
-    <Compile Include="Models\Repositories\EnrollRepository.cs" />
     <Compile Include="Models\Repositories\SessionReposity.cs" />
     <Compile Include="Models\Repositories\UserRepository.cs" />
     <Compile Include="Models\DAL\ConferenceContext.cs" />
-    <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\Repositories\AuthProvider.cs" />
     <Compile Include="Models\Roles.cs" />
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserLogin.cs" />
+    <Compile Include="Models\UserRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -274,6 +273,7 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Profile.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -283,8 +283,8 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201403062225287_IntitialCreate.resx">
-      <DependentUpon>201403062225287_IntitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201403071443387_InitialCreate.resx">
+      <DependentUpon>201403071443387_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
